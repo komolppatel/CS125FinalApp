@@ -22,7 +22,7 @@ public class Compliments extends AppCompatActivity {
             "You're wonderful.",
             "Jokes are funnier when you tell them.",
             "You're like a breath of fresh air.",
-            "You're a candle in teh darkness.",
+            "You're a candle in the darkness.",
             "Thank you for being you."};
 
     @Override
@@ -43,7 +43,6 @@ public class Compliments extends AppCompatActivity {
 
         TextView compli = findViewById(R.id.comp);
         compli.setText(randomCompliment());
-
 
 
     }
