@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CS 125 Final App</string>
+    <string name="title_activity_compliments">Compliments</string>
+    <string name="title_activity_roasts">Roasts</string>
 </resources>

@@ -2,10 +2,16 @@ package com.example.cs125finalapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button compliments;
+    private Button roasts;
 
     /**
      * An array of strings with motivational quotes for entries.
@@ -44,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
      * An array of strings with compliments as entries.
      */
 
-    public static String[] compliments = {"You're a gift to those around you.",
+    public static String[] compliment = {"You're a gift to those around you.",
             "You are enough.",
             "You light up the room.",
             "You should be proud of yourself.",
@@ -111,6 +117,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        compliments = findViewById(R.id.complimentButton);
+        compliments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCompliments();
+            }
+        });
+        roasts = findViewById(R.id.roastButton);
+        roasts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openRoasts();
+            }
+        });
     }
 
 
@@ -147,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private String randomCompliment() {
-        return compliments[randomNumber(compliments.length)];
+        return compliment[randomNumber(compliment.length)];
     }
 
 
@@ -159,6 +180,16 @@ public class MainActivity extends AppCompatActivity {
         return "Thou art a  " + roastFirstAdjectives[randomNumber(roastFirstAdjectives.length)]
                 + ", " + roastSecondAdjectives[randomNumber(roastSecondAdjectives.length)] + " "
                 + roastNouns[randomNumber(roastNouns.length)] + ".";
+    }
+
+    public void openCompliments() {
+        Intent intent = new Intent(this, Compliments.class);
+        startActivity(intent);
+    }
+
+    public void openRoasts() {
+        Intent intent = new Intent(this, Roasts.class);
+        startActivity(intent);
     }
 
     // yet to be written: randomTrivia
