@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private Button trivias;
     private Button again;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,8 +64,5 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("type", string);
         startActivity(intent);
     }
-
-
-
     // yet to be written: randomTrivia
 }
