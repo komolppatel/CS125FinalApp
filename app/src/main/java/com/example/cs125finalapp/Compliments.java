@@ -8,9 +8,22 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.text.style.BackgroundColorSpan;
 import android.view.View;
+import android.widget.TextView;
 
 public class Compliments extends AppCompatActivity {
+
+    public static String[] compliment = {"You're a gift to those around you.",
+            "You are enough.",
+            "You light up the room.",
+            "You should be proud of yourself.",
+            "You're a ray of sunshine on a dreary day.",
+            "You're wonderful.",
+            "Jokes are funnier when you tell them.",
+            "You're like a breath of fresh air.",
+            "You're a candle in teh darkness.",
+            "Thank you for being you."};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +40,20 @@ public class Compliments extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        TextView compli = findViewById(R.id.comp);
+        compli.setText(randomCompliment());
+
+
+
+    }
+
+    private int randomNumber(int length) {
+        return (int) (Math.random() * length);
+    }
+
+    private String randomCompliment() {
+        return compliment[randomNumber(compliment.length)];
     }
 
 }
