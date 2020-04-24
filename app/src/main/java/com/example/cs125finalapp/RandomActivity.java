@@ -128,15 +128,15 @@ public class RandomActivity extends AppCompatActivity {
                 generate();
             }
         });
-        /*
+
         back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(RandomActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        }); */
+        });
 
     }
 
