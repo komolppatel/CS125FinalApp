@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         trivias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openRandom("trivia");
+                Intent intent = new Intent(MainActivity.this, TriviaActivity.class);
+                startActivity(intent);
             }
         });
     }
