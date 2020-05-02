@@ -8,22 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 public class RandomActivity extends AppCompatActivity {
 
-    private Button compliments;
-    private Button roasts;
-    private Button joke;
-    private Button quote;
-    private Button trivias;
     private Button again;
     private Button back;
 
@@ -162,12 +148,6 @@ public class RandomActivity extends AppCompatActivity {
         } else if (typ.equals("quotes")) {
             butt.setText(randomQuote());
         }
-        //else if (typ.equals("trivia")) {
-          //  butt.setText(randomTrivia());
-        //}
-        //else if (typ.equals("trivia")) {
-          //  butt.setText((randomTrivia()));
-        //}
     }
 
 
@@ -218,30 +198,4 @@ public class RandomActivity extends AppCompatActivity {
                 + ", " + roastSecondAdjectives[randomNumber(roastSecondAdjectives.length)] + " "
                 + roastNouns[randomNumber(roastNouns.length)] + ".";
     }
-    /*private String randomTrivia() {
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, API_BASE, null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            trivia = response.getString("text");
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-            }
-        });
-        jsonRequest.add(request);
-        return trivia;
-    }*/
-    //private String randomTrivia() {
-      //  String randomFact =
-        //return
-    //}
-
-
 }

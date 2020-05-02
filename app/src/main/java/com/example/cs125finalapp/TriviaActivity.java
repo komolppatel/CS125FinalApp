@@ -69,4 +69,3 @@ public class TriviaActivity extends AppCompatActivity {
         triviaStuff.setText(trivia);
     }
 }
-//goodie pie woo
