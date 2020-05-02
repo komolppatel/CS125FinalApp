@@ -20,7 +20,7 @@ import org.json.JSONObject;
 public class TriviaActivity extends AppCompatActivity {
 
     public static final String API_BASE = "http://numbersapi.com/random?min=1&max=50?json";
-    private RequestQueue jsonRequest;
+    private RequestQueue jsonRequest = null;
     private String trivia;
     private Button backHome;
     private Button generateTrivia;
